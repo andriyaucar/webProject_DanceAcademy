@@ -1,0 +1,19 @@
+$def with (about)
+    
+$var title: "About"
+$var url = "/about"
+
+
+ <div id="container"> 
+  
+    <div class="heading_bg">
+      $for abouts in about: 
+       $ member_name = abouts["title"].replace(" ","_")                
+        <h2>$abouts["title"]</h2>
+        <p>$abouts["name1"]</p>
+        <p>$abouts["name2"]<p>
+        <p>$abouts["name3"]<p>
+</div>
+  <div style="clear:both; height: 40px"></div>
+
+</div>

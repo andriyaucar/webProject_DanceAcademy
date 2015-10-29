@@ -1,0 +1,21 @@
+$def with (contact)
+    
+$var title: "Contact"
+$var url = "/contact"
+
+
+ <div id="container"> 
+  
+    <div class="heading_bg">
+      $for contacts in contact: 
+       $ contact_name = contacts["title"].replace(" ","_")                
+        <h2>$contacts["title"]</h2>
+        <p>$contacts["subtitle"]</p>
+        <p>$contacts["topic"]<p>
+        <p>$contacts["address"]<p>
+        <p>$contacts["tel"]<p>
+        <p>$contacts["email"]<p>
+</div>
+  <div style="clear:both; height: 40px"></div>
+
+</div>

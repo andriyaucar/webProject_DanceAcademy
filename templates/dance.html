@@ -1,0 +1,49 @@
+$def with (dance, trainer, quote, photo)
+    
+$var title: $dance["title"]
+$var trainer: $trainer.name
+$var dance: $dance.img1
+$var dance: $dance.audio
+$var trainer: $trainer.t_img
+$var dance: $dance.dates
+$var dance: $dance.hours
+$var dance: $dance.room
+
+
+
+<div id="container">
+
+    <div id="slider3" class="nivoSlider" style="width: 630px; height: 416px">
+	<a href="#"><img title="" src="/static/design/img/$dance.img1" alt="" width="630" height="416"></a><img title="" src="/static/design/img/$dance.img2" alt="" width="630" height="416"></div>
+	<div style="clear:both"></div><div class="one-third"></div> 
+	
+
+	<div class="sidebar_right">
+    <ul id="tabify_menu" class="menu_tab" style="margin: 0;">
+      <li class="active"><a href="#fane1">Trainers</a></li>
+      
+    </ul>
+	
+    <div id="fane1" class="tab_content">
+   
+   
+   
+    <div class="tab_article"> <img src="/static/design/img/$trainer.t_img"></div>
+		<p>$trainer.name</p>
+		<p>$dance.dates</p>
+		<p>$dance.hours</p>
+		<p>$dance.room</p>
+    </div>
+   
+    
+   	 <audio src="/static/design/img/music/$dance.audio" controls="controls">
+  </div>				
+                <h2><a href="#">$dance["title"]</a></h2>
+                        <span class="user"><a href="/team?trainer=$quote(trainer.name)">$trainer.name</a></span><span class="noscreen"></span>
+                <p>$dance["summary"]</p>
+				
+
+		 <p>Tür: $photo</p>
+		 <div style="clear:both; height: 40px"></div>
+ </div>
+	

@@ -1,0 +1,36 @@
+$def with(dances, trainer_names_dict)
+
+$var title = "All Dances"
+$var url = "/danslar"
+
+<!-- END header -->
+ <div id="container">
+     <div id="slider3" class="nivoSlider" style="width: 930px; height: 416px">
+	<a href="#"><img title="" src="/static/design/img/dance1.jpg" alt="" width="630" height="416"></a><img title="" src="/static/design/img/dance2.jpg" alt="" width="630" height="416"></a></div>
+	<div style="clear:both"></div><div class="one-third"></div> 
+ 
+<div class="one-third last"> 
+<div class="heading_bg">
+ <h2><b>Dances</b></h2></div>
+  <ul>
+      $for dance in dances: 
+       $ dances_name = dance["title"].replace(" ","_")                
+        <li><a href="/dance/$dances_name/$dance['did']">$dance["title"]</a> by $trainer_names_dict[dance["tid"]] $dance["dates"]</li>
+
+   </ul>
+</div>
+
+
+<div class="sidebar_right" style="margin-top: 30px;">
+	<ul id="tabify_menu" class="menu_tab" style="margin: 0;">
+	<div id="fane1" class="tab_content">
+	<div class="heading_bg"><a href="/dance/add"><b>Add Dance</b></a></div>
+	<p>If you want add a dance, you can click Add Dance.</p>
+</div>
+</div>
+
+    <div style="clear:both; height: 40px"></div>    
+</div>
+
+
+

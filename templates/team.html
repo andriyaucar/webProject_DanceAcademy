@@ -1,0 +1,33 @@
+$def with (team, dances)
+$var title: Team
+$var url = "/team"
+
+<div id="container">
+<div class="one-third last">
+<div class="heading_bg">
+                <h2><b>Select trainer</b></h2></div>
+                 <form>
+                 <select name="trainer">
+                 <option>Select one</option>
+                 $for trainer in team:
+                    <option>$trainer.name</option>
+                 </select><input type="submit" value="GET DANCES">                 
+                 </form>
+                 $if dances != []:
+                   <ul>
+                   $for dance in dances: 
+                     $ dances_name = dance.title.replace(" ","_")                
+                     <li><a href="/dance/$dances_name/$dance.did">$dance["title"]</a></li>
+					 </ul>
+ </div>
+
+<div class="sidebar_right" style="margin-top: 30px;">
+	<ul id="tabify_menu" class="menu_tab" style="margin: 0;">
+	<div id="fane1" class="tab_content">
+<div class="heading_bg"><a href="/trainer/add"><b>Add Trainer</b></a></div>
+<p>If you want add a trainer, you can click Add Trainer.</p>
+</div>
+              
+  </div> 
+   <div style="clear:both; height: 40px"></div> 
+</div> 

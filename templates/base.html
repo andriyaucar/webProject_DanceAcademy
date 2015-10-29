@@ -1,0 +1,95 @@
+$def with (content)
+
+$ menu_items = [ ("/", "Home"), ("/dances", "All Dances"), ("/about", "About"), ("/team", "Trainers"), ("/contact", "Contact") ]
+
+<!DOCTYPE HTML>
+<head>
+<title>DANCE ACADEMY</title>
+<meta charset="utf-8">
+<!-- CSS Files -->
+<link rel="stylesheet" href="/static/css/style.css" type="text/css" media="screen" >
+<link rel="stylesheet" href="/static/menu/css/simple_menu.css" type="text/css" media="screen" >
+<link rel="stylesheet" href="/static/css/nivo-slider.css" type="text/css" media="screen">
+<!-- JS Files -->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/custom.js"></script>
+<script src="/static/js/slides/slides.min.jquery.js"></script>
+<script src="/static/js/cycle-slider/cycle.js"></script>
+<script src="/static/js/nivo-slider/jquery.nivo.slider.js"></script>
+<script src="/static/js/tabify/jquery.tabify.js"></script>
+<script src="/static/js/prettyPhoto/jquery.prettyPhoto.js"></script>
+<script src="/static/js/twitter/jquery.tweet.js"></script>
+<script src="/static/js/scrolltop/scrolltopcontrol.js"></script>
+<script src="/static/js/portfolio/filterable.js"></script>
+<script src="/static/js/modernizr/modernizr-2.0.3.js"></script>
+<script src="/static/js/easing/jquery.easing.1.3.js"></script>
+<script src="/static/js/kwicks/jquery.kwicks-1.5.1.pack.js"></script>
+<script src="/static/js/swfobject/swfobject.js"></script>
+
+
+<!-- FancyBox -->
+<link rel="stylesheet" type="text/css" href="/static/js/fancybox/jquery.fancybox.css" media="all">
+<script src="/static/js/fancybox/jquery.fancybox-1.2.1.js"></script>
+</head>
+<body>
+<div class="header">
+  <!-- Logo/Title -->
+
+    <div id="site_title"><a href="/">DANCE ACADEMY</a> </div>
+
+  <!-- Main Menu -->
+  <ol id="menu">
+    <li><a href="/">Home</a></li>
+    <!-- end sub menu -->
+    <li><a href="/about">About</a></li> 
+    
+    <!-- end sub menu -->
+   
+	
+	<li><a href="/danslar">Danslar</a></li>
+    <!-- end sub menu -->
+	<li><a href="#">Gallerıes</a>
+      <!-- sub menu -->
+      <ol>
+	    <li class="last"><a href="/picture">Pictures</a></li>
+        <li><a href="/video">Videos</a></li>
+      </ol>
+    </li>
+    <!-- end sub menu -->
+	
+	 <li><a href="/team">Team</a></li>
+ 
+   
+    <!-- end sub menu -->
+	
+    <li><a href="/contact">Contact</a></li>
+  </ol>
+</div>
+<!-- END header -->
+<!-- Content -->
+        <div id="content">
+
+            $:content
+
+            
+            
+        </div> <!-- /content -->
+
+<div id="footer">
+  
+  <!-- Third Column -->
+  <div class="one-fourth">
+    <h3>Information</h3>
+    <p>Dance Academy</p>
+    <p>36 Battersea Square, London
+	SW11 3RA</p>
+    <p>t: +44 (0)20 7326 8000</p>
+	<p>e: info@rad.org.uk</p>
+    <div id="social_icons"></div>
+  </div>
+<div class="one-fourth last"></div>
+  <div style="clear:both"></div>
+</div>
+<!-- END footer -->
+</body>
+</html>

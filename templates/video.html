@@ -1,0 +1,30 @@
+$def with (video)
+    
+$var title: "Video"
+$var url = "/video"
+
+$for videos in video: 
+    $ video_name = videos["title"].replace(" ","_") 
+
+<div id="container">
+  <div class="content">
+    <div id="command"><a class="lightSwitcher" href="#">Lights</a></div>
+    <div id="movie">
+      <iframe src="/static/design/$videos.video1" width="960" height="540" frameborder="0"></iframe>
+	  <iframe src="/static/design/$videos.video2" width="960" height="540" frameborder="0"></iframe>
+	  <iframe src="/static/design/$videos.video3" width="960" height="540" frameborder="0"></iframe>
+	</div>
+	</div>
+
+ 
+  <div style="clear:both"></div>
+  <div class="one-half">
+    <h2>$videos.subtitle1</h2>
+    <p>$videos.text1</p>
+	</div>
+  <div class="one-half last">
+    <h2>$videos.subtitle2</h2>
+    <p>$videos.text2</p>
+	</div>
+  <div style="clear:both; height: 40px"></div>
+</div>
